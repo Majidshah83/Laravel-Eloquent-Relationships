@@ -5,6 +5,8 @@ use App\Http\Controllers\MobileController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SingerController;
+use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,11 @@ Route::get('store',[AuthorController::class ,'store'])->name('store');
 Route::get('add_post/{id}',[PostController::class ,'add_post'])->name('add_post');
 Route::get('showpost/{id}',[PostController::class ,'show_post'])->name('showpost');
 Route::get('showindex',[AuthorController::class ,'index'])->name('showindex');
+
+//many to many realtionship
+
+Route::get('store-singer-song',[SingerController::class ,'store'])->name('store-singer-song');
+Route::get('storeSong',[SongController::class ,'storeSong'])->name('storeSong');
+Route::get('show_song/{id}',[SongController::class ,'show_song'])->name('show_song');
+Route::get('show_singer/{id}',[SingerController::class ,'show_singer'])->name('show_singer');
+Route::get('index-singer',[SingerController::class ,'index'])->name('index-singer');
