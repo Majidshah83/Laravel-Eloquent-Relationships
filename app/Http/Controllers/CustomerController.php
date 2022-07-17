@@ -27,5 +27,20 @@ class CustomerController extends Controller
      $mobile=Customer::find($id)->mobile->get();
 
         return $mobile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     }
 }
